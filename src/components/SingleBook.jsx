@@ -33,7 +33,7 @@ class SingleBook extends Component {
             </div>
           </Card.Body>
         </Card>
-        {this.state.selected === true && <CommentArea />}
+        {this.state.selected === true && <CommentArea idBook={item.asin} />}
       </Col>
     );
   }
