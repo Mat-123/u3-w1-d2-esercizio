@@ -1,6 +1,7 @@
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import React, { Component } from "react";
+import CommentArea from "./CommentArea";
 
 class SingleBook extends Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class SingleBook extends Component {
             </div>
           </Card.Body>
         </Card>
+        {this.state.selected === true && <CommentArea />}
       </Col>
     );
   }
