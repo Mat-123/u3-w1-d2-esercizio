@@ -3,12 +3,6 @@ import { Component } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import Alert from "react-bootstrap/Alert";
 
-const initialReview = {
-  comment: "",
-  rate: "",
-  elementId: "",
-};
-
 class CommentArea extends Component {
   state = {
     review: [],
@@ -21,7 +15,7 @@ class CommentArea extends Component {
   }
 
   fetchingReviews = () => {
-    fetch("https://striveschool-api.herokuapp.com/api/comments/${idBook}", {
+    fetch(`https://striveschool-api.herokuapp.com/api/comments/${this.props.idBook}`, {
       headers: {
         "Content-Type": "application/json",
         Authorization:
