@@ -19,7 +19,7 @@ function BookList({ books }) {
       </div>
       <Row>
         {filteredBooks.map((book, i) => (
-          <SingleBook key={book.asin} item={book} />
+          <SingleBook key={i} item={book} />
         ))}
       </Row>
     </Container>

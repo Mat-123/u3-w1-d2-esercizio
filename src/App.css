@@ -42,6 +42,11 @@
   overflow: hidden;
 }
 
+.cardBody {
+  max-height: 300px;
+  overflow: auto;
+}
+
 .pointer {
   cursor: pointer;
 }
