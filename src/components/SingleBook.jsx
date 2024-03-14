@@ -13,15 +13,19 @@ class SingleBook extends Component {
   render() {
     const { item } = this.props;
     const { selected } = this.state;
+    const title = item.title.length > 25 ? item.title.substring(0, 25) + "..." : item.title;
     return (
       <Col xs={6} md={4} lg={2}>
         <Card
-          className={`my-3 ${selected ? "border-danger" : ""}`}
+          className={`my-3 cardBody ${selected ? "border-danger" : ""}`}
           onClick={() => this.setState({ selected: !selected })}
         >
-          <Card.Img variant="top" src={item.img} />
+          {" "}
+          <div className="bookCardImg">
+            <Card.Img variant="top" src={item.img} />
+          </div>
           <Card.Body>
-            <Card.Title className="mb-3">{item.title}</Card.Title>
+            <Card.Title className="mb-3">{title}</Card.Title>
             <div className="d-flex">
               <Card.Text className="me-auto">{item.category}</Card.Text>
               <Card.Text>{item.price}€</Card.Text>
