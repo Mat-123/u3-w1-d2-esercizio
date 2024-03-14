@@ -41,3 +41,7 @@
   height: 200px;
   overflow: hidden;
 }
+
+.pointer {
+  cursor: pointer;
+}

@@ -16,7 +16,7 @@ class SingleBook extends Component {
     return (
       <Col xs={6} md={4} lg={2}>
         <Card
-          className={`my-3 ${selected ? "border-danger" : ""}`}
+          className={`pointer shadow my-3 ${selected ? "border-danger" : ""}`}
           onClick={() => this.setState({ selected: !selected })}
         >
           <Card.Img variant="top" src={item.img} />
